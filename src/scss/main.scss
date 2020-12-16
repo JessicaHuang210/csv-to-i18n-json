@@ -1,1 +1,78 @@
 @import "./basic/reset.scss";
+
+.container {
+  padding: 50px;
+  .form-group {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  font-size: 14px;
+}
+h1 {
+  font-size: 30px;
+}
+.content {
+  padding: 30px;
+  background-color: #f5f5f5;
+  margin: 30px 0;
+  h3 {
+    margin: 0;
+  }
+  ul {
+    list-style-type: disc;
+    margin: 20px;
+    li {
+      margin-bottom: 7px;
+      color: #333;
+    }
+  }
+  img {
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  .result {
+    margin-bottom: 20px;
+    code {
+      padding: 2px 5px;
+      background-color: #ccc;
+      border-radius: 3px;
+    }
+    pre {
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 3px;
+      line-height: 25px;
+    }
+  }
+}
+.filename {
+  color: #333;
+}
+@mixin btn {
+  border-radius: 3px;
+  padding: 7px 12px;
+}
+.upload {
+  @include btn;
+  background-color: #ea493c;
+  color: #fff;
+  max-width: 90px;
+  text-align: center;
+  display: block;
+  margin-right: 10px;
+  > input {
+    display: none;
+  }
+}
+select {
+  @include btn;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+button {
+  @include btn;
+  background-color: #ea493c;
+  color: #fff;
+  border: 0;
+}
