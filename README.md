@@ -1,24 +1,8 @@
-# vue3-demo
+# Convert csv to json i18n transfer file
 
-## Project setup
-```
-yarn install
-```
+## Usage
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+1. upload csv file (you can see the demo file on site).
+2. Select the language, it will also be your file name.
+3. Click "匯出" to download the json file
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
