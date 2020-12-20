@@ -4,7 +4,7 @@
     <div class="section1">
       <transition appear name="fadeDown">
         <div class="section1--header">
-          <h1>CSV to JSON</h1>
+          <h1>CSV to i18n JSON</h1>
           <p>上傳指定格式csv檔，輕鬆轉換為i18n可用格式的json檔</p>
         </div>
       </transition>
@@ -35,12 +35,14 @@
         </table>
       </div>
       <div class="section2--download">
-        <select class="section2--select" v-model="states.lang">
+        <select class="section2--download--select" v-model="states.lang">
           <option v-for="i in langs" :key="i.id" :value="i.id">
             {{ i.name }}
           </option>
         </select>
-        <button class="section2--btn" @click="handleParseToJson">匯出</button>
+        <button class="section2--download--btn" @click="handleParseToJson">
+          匯出
+        </button>
       </div>
     </div>
 
@@ -59,15 +61,18 @@
       </div>
     </div>
   </div>
+  <Footer />
 </template>
 
 <script>
 import { reactive, computed } from "vue";
 import Papa from "papaparse";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 export default {
   components: {
-    Header
+    Header,
+    Footer
   },
   setup() {
     const states = reactive({

@@ -3,9 +3,15 @@
   margin-bottom: 40px;
   &--header {
     margin-bottom: 60px;
+    @include rwd(pad) {
+      margin-bottom: 30px;
+    }
     h1 {
       margin-bottom: 20px;
       font-size: 55px;
+      @include rwd(pad) {
+        font-size: 35px;
+      }
     }
     p {
       color: $text-color-1;
@@ -41,28 +47,31 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include rwd(pad) {
+    display: block;
+  }
   &--download {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  &--btn {
-    @include btn;
-    padding: 15px;
-    width: 300px;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-    font-weight: 900;
-    font-size: 16px;
-  }
-  &--select {
-    border: 1px solid $light-color-3;
-    border-radius: 10px;
-    font-size: 20px;
-    width: 300px;
-    padding: 10px 20px;
-    margin-bottom: 50px;
+    &--btn {
+      @include btn;
+      padding: 15px;
+      width: 300px;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+      font-weight: 900;
+      font-size: 16px;
+    }
+    &--select {
+      border: 1px solid $light-color-3;
+      border-radius: 10px;
+      font-size: 20px;
+      width: 300px;
+      padding: 10px 20px;
+      margin-bottom: 50px;
+    }
   }
   &--table {
     padding: 20px;
@@ -71,8 +80,14 @@
     border-radius: 10px;
     max-height: 400px;
     overflow: auto;
+    flex: 1;
+    @include rwd(pad) {
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
     table {
       margin: auto;
+      box-sizing: border-box;
     }
     th,
     td {
@@ -94,6 +109,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include rwd(pad) {
+    padding: 10px;
+  }
   &--demo {
     flex: 1 1;
     margin-right: 50px;
@@ -118,6 +136,9 @@
       line-height: 30px;
       word-spacing: 3px;
       font-family: "Courier New", Courier, monospace;
+      @include rwd(pad) {
+        padding: 10px;
+      }
     }
   }
 }

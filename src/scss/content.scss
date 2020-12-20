@@ -1,8 +1,23 @@
+html {
+  height: 100%;
+}
+body,
+#app {
+  height: inherit;
+}
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 .container {
   padding: 50px;
   max-width: 1024px;
-  margin: auto;
+  margin: 50px auto;
   font-size: 14px;
+  @include rwd(pad) {
+    padding: 20px;
+  }
 }
 h1 {
   font-size: 30px;
